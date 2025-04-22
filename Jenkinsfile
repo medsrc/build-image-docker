@@ -8,12 +8,12 @@ pipleine {
              }
             stage('build image docker) {
                     steps {
-                           sh " docker build -t  med/nginx  ."
+                           sh " docker build -t  med-nginx  . "
                    {
             }
             stage('Test image docker) {
                     steps {
-                         sh " docker run -d -p 80:80 med/nginx  " 
+                         sh " docker run -d -p 80:80 med-nginx  " 
                    {
             }    
       }
