@@ -3,7 +3,7 @@ pipleine {
     stages { 
             stage('Checkout SCM') {
                    steps {
-                     git branch: 'main', url: 'https://github.com/medsrc/build-image-docker.git'
+                     git branch: 'main', credentialsId: 'user_github', url: 'https://github.com/medsrc/build-image-docker.git'
                    }
              }
              stage('build image docker') {
