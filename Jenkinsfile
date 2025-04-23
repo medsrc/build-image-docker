@@ -3,8 +3,18 @@ pipeline {
     environment {
         IMG_NAME = 'med/nginx'
         DOCKER_REPO = 'build-image-docker'
+        } 
+       stages {
+          stage('cleanUp') {
+              steps {
+                   deleteDir()
+              }
         }
-    stages {
+        stage('Checkout SCM') {
+            steps {
+                git branch: 'main', url: 'https://github.com/medsrc/projet-CI-build-maven.git'
+                  }
+        }
         stage('build') {
             steps {
                 script {
