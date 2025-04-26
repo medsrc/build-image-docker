@@ -1,3 +1,3 @@
 FROM  nginx:latest
-COPY  /src/html/* /usr/share/nginx/html
+COPY  ./monsite/* /usr/share/nginx/html
 
