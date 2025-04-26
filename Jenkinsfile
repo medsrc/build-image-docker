@@ -22,13 +22,13 @@ pipeline {
                         sh 'docker tag ${IMG_NAME} ${DOCKER_REPO}:${IMG_NAME}'
                 }
             }
-             stage('deploiement conteneur') {
+         }
+         stage('deploiement conteneur') {
             steps {
                 script {
                         sh 'docker run -d --name monapp --hostname monapp ${IMG_NAME}'
                       }
                 }
             }
-         }
-     }
-}
+        }
+   }
