@@ -29,7 +29,7 @@ pipeline {
                 script {
                         sh 'docker stop monapp'
                         sh 'docker rm monapp'
-                        sh 'docker run -d --name monapp --hostname monapp ${IMG_NAME}'
+                        sh 'docker run -d --name monapp --hostname monapp -p 8585:80 ${IMG_NAME}'
                       }
                 }
             }
