@@ -26,6 +26,9 @@ pipeline {
             steps {
                 script {
                         sh 'docker run -d --name monapp --hostname monapp ${IMG_NAME}'
+                      }
                 }
             }
-        }
+         }
+     }
+}
