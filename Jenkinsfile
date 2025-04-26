@@ -27,7 +27,7 @@ pipeline {
             steps {
                 script {
                         sh 'docker stop monapp'
-                        sh 'docker stop monapp'
+                        sh 'docker rm monapp'
                         sh 'docker run -d --name monapp --hostname monapp ${IMG_NAME}'
                       }
                 }
