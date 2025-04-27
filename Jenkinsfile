@@ -15,7 +15,7 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/medsrc/build-image-docker.git'
                   }
         }
-        stage('build') {
+        stage('build image') {
             steps {
                 script {
                         sh 'docker build -t ${IMG_NAME} .'
